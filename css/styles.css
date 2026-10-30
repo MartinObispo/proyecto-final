@@ -2,14 +2,102 @@ body {
     font-family: Arial, sans-serif;
     background-color: #0f172a;
     color: #e2e8f0;
-    text-align: center;
-    padding: 50px;
+    margin: 0;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
 }
-header {
+
+.main-container {
+    max-width: 900px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.hero-header {
     background-color: #1e293b;
-    padding: 20px;
-    border-radius: 8px;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
+
+.logo-badge {
+    font-size: 26px;
+    font-weight: bold;
+    color: #38bdf8;
+    margin-bottom: 10px;
+}
+
 h1 {
     color: #38bdf8;
+    font-size: 28px;
+    margin: 10px 0;
+}
+
+.tagline {
+    color: #94a3b8;
+    font-size: 16px;
+}
+
+.content-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card {
+    background-color: #1e293b;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    border-left: 4px solid #38bdf8;
+}
+
+.card h2, .concepts-section > h2 {
+    color: #38bdf8;
+    margin-top: 0;
+    font-size: 20px;
+}
+
+.card p {
+    line-height: 1.6;
+    color: #cbd5e1;
+    margin-bottom: 0;
+}
+
+.concepts-section {
+    background-color: #1e293b;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.grid-concepts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.concept-card {
+    background-color: #0f172a;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #334155;
+}
+
+.concept-card h3 {
+    color: #38bdf8;
+    margin-top: 0;
+    font-size: 18px;
+}
+
+.concept-card p {
+    color: #cbd5e1;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 0;
 }
