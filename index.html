@@ -49,25 +49,61 @@
                 </div>
             </div>
         </section>
-        <section style="max-width:600px;margin:30px auto;padding:20px;border:1px solid #1e90ff;border-radius:8px;">
-  <h2>Módulo de cifrado</h2>
-  <p>Mensaje:</p>
-  <textarea id="mensaje" rows="3" style="width:100%;"></textarea>
-  <p>Algoritmo:</p>
-  <select id="algoritmo">
-    <option value="cesar">César (clave: número)</option>
-    <option value="vigenere">Vigenère (clave: palabra)</option>
-    <option value="aes">AES (clave: contraseña)</option>
-  </select>
-  <p>Clave:</p>
-  <input id="clave" type="text" style="width:100%;">
-  <br><br>
-  <button onclick="cifrarMensaje()">Cifrar</button>
-  <p>Mensaje cifrado:</p>
-  <pre id="resultado" style="white-space:pre-wrap;word-break:break-all;"></pre>
-</section>
-<script src="Cifrado.js"></script>
-        
+
+        <!-- Requerimiento 4 y 6: Módulo de Cifrado y Generación de Claves -->
+        <section class="concepts-section">
+            <h2>Módulo de Cifrado</h2>
+            <div style="display: flex; flex-direction: column; gap: 15px;">
+                <label>Mensaje:</label>
+                <textarea id="mensaje" rows="3" class="input-styled" placeholder="Escribe tu mensaje aquí..."></textarea>
+                
+                <label>Algoritmo:</label>
+                <select id="algoritmo" class="input-styled">
+                    <option value="cesar">César (clave: número)</option>
+                    <option value="vigenere">Vigenère (clave: palabra)</option>
+                    <option value="aes">AES (clave: contraseña)</option>
+                </select>
+                
+                <label>Clave:</label>
+                <div style="display: flex; gap: 10px;">
+                    <input id="clave" type="text" class="input-styled" style="flex: 1;" placeholder="Ingresa o genera una clave">
+                    <button type="button" class="btn-action btn-secondary" onclick="generarClaveAleatoria('clave', 'algoritmo')">🎲 Generar</button>
+                </div>
+                
+                <br>
+                <button class="btn-action" onclick="cifrarMensaje()">Cifrar</button>
+                
+                <label>Mensaje cifrado:</label>
+                <pre id="resultado" class="result-box"></pre>
+            </div>
+        </section>
+
+        <!-- Requerimiento 5: Módulo de Descifrado -->
+        <section class="concepts-section">
+            <h2>Módulo de Descifrado</h2>
+            <div style="display: flex; flex-direction: column; gap: 15px;">
+                <label>Mensaje Cifrado:</label>
+                <textarea id="mensajeDescifrar" rows="3" class="input-styled" placeholder="Pega el mensaje cifrado aquí..."></textarea>
+                
+                <label>Algoritmo:</label>
+                <select id="algoritmoDescifrar" class="input-styled">
+                    <option value="cesar">César (clave: número)</option>
+                    <option value="vigenere">Vigenère (clave: palabra)</option>
+                    <option value="aes">AES (clave: contraseña)</option>
+                </select>
+                
+                <label>Clave:</label>
+                <input id="claveDescifrar" type="text" class="input-styled" placeholder="Ingresa la clave correspondiente">
+                
+                <br>
+                <button class="btn-action btn-green" onclick="descifrarMensaje()">Descifrar</button>
+                
+                <label>Mensaje Original Recuperado:</label>
+                <pre id="resultadoDescifrado" class="result-box"></pre>
+            </div>
+        </section>
+
+        <script src="Cifrado.js"></script>
     </div>
 </body>
 </html>
