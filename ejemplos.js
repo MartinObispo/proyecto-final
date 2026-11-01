@@ -1,6 +1,6 @@
 
 /*
- * PA3 - Criptografía Aplicada
+ * PA3 - Criptografía
  * Requerimiento 7: Ejemplos prácticos interactivos
  * Proyecto CryptoSec
  */
@@ -23,3 +23,26 @@ const ejemplosCriptografia = {
     explicacion: "AES-GCM cifra el mensaje utilizando una clave derivada de una contraseña."
   }
 };
+
+
+
+function cargarEjemplo() {
+  const algoritmo = document.getElementById("seleccionarEjemplo").value;
+  const ejemplo = ejemplosCriptografia[algoritmo];
+
+  if (!ejemplo) return;
+
+  document.getElementById("mensaje").value = ejemplo.mensaje;
+  document.getElementById("algoritmo").value = algoritmo;
+  document.getElementById("clave").value = ejemplo.clave;
+
+  document.getElementById("explicacionEjemplo").textContent =
+    ejemplo.explicacion;
+
+  document.getElementById("resultado").textContent = "";
+
+  document.getElementById("mensaje").scrollIntoView({
+    behavior: "smooth",
+    block: "center"
+  });
+}
