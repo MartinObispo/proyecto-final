@@ -103,7 +103,34 @@
             </div>
         </section>
 
+        
+<!-- Requerimiento 7: Ejemplos Prácticos Interactivos -->
+<section class="concepts-section">
+    <h2>Ejemplos Prácticos Interactivos</h2>
+
+    <div style="display: flex; flex-direction: column; gap: 15px;">
+        <p>Selecciona un algoritmo para explorar un ejemplo de cifrado.</p>
+
+        <label for="seleccionarEjemplo">Algoritmo:</label>
+        <select id="seleccionarEjemplo" class="input-styled">
+            <option value="cesar">Cifrado César</option>
+            <option value="vigenere">Cifrado Vigenère</option>
+            <option value="aes">Cifrado AES-GCM</option>
+        </select>
+
+        <button type="button" class="btn-action" onclick="cargarEjemplo()">
+            Cargar ejemplo
+        </button>
+
+        <p id="explicacionEjemplo"></p>
+    </div>
+</section>
+
+
+        
+
         <script src="Cifrado.js"></script>
+        <script src="ejemplos.js"></script>
     </div>
 </body>
 </html>
