@@ -69,6 +69,7 @@ async function cifrarMensaje() {
     resultado = await aAES(texto, clave);
   }
   salida.textContent = resultado;
+  registrarOperacion("Cifrado", algoritmo.toUpperCase(), texto);
 }
 
 
@@ -151,6 +152,7 @@ async function descifrarMensaje() {
   }
 
   salida.textContent = resultado;
+  registrarOperacion("Descifrado", algoritmo.toUpperCase(), resultado);
 }
 
 
