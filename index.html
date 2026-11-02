@@ -49,7 +49,47 @@
                 </div>
             </div>
         </section>
+<!-- Requerimiento 3: Sección de Algoritmos -->
+<section class="concepts-section">
+    <h2>Algoritmos Criptográficos</h2>
+    <div class="grid-concepts">
+        <div class="concept-card">
+            <h3>AES (128, 192 y 256 bits)</h3>
+            <p><b>Tipo:</b> cifrado simétrico por bloques.</p>
+            <p><b>Características:</b> usa la misma clave para cifrar y descifrar. Trabaja con bloques de 128 bits y la clave puede ser de 128, 192 o 256 bits. Mientras más larga la clave, más difícil de atacar. En la práctica de clase lo usamos en modo GCM, que además comprueba que el mensaje no haya sido alterado.</p>
+            <p><b>Aplicaciones:</b> redes WiFi, páginas web seguras (HTTPS), discos y archivos cifrados, VPN.</p>
+        </div>
 
+        <div class="concept-card">
+            <h3>ChaCha20</h3>
+            <p><b>Tipo:</b> cifrado simétrico de flujo.</p>
+            <p><b>Características:</b> usa una clave de 256 bits y un nonce, y va cifrando el mensaje de a pocos bytes en lugar de por bloques. Es muy rápido en celulares y equipos sin aceleración para AES. Normalmente se combina con Poly1305, que le agrega autenticación.</p>
+            <p><b>Aplicaciones:</b> conexiones seguras por internet (TLS), VPN como WireGuard y conexiones SSH.</p>
+        </div>
+
+        <div class="concept-card">
+            <h3>SHA-256</h3>
+            <p><b>Tipo:</b> función hash (no cifra).</p>
+            <p><b>Características:</b> convierte cualquier archivo o texto en una huella digital de 256 bits, que se ve como 64 caracteres. No se puede volver atrás para recuperar el original, y si cambias una sola letra, la huella cambia por completo. Por eso sirve para saber si algo fue modificado.</p>
+            <p><b>Aplicaciones:</b> verificar la integridad de archivos descargados, firmas digitales, certificados y blockchain.</p>
+        </div>
+
+        <div class="concept-card">
+            <h3>Cifrado César</h3>
+            <p><b>Tipo:</b> simétrico clásico, de sustitución.</p>
+            <p><b>Características:</b> cada letra se mueve una cantidad fija de posiciones en el alfabeto, y ese número es la clave. Es muy fácil de usar, pero también de romper, porque solo hay 25 desplazamientos posibles.</p>
+            <p><b>Aplicaciones:</b> hoy se usa solo para aprender. Se dice que Julio César lo usaba para sus mensajes militares.</p>
+        </div>
+
+        <div class="concept-card">
+            <h3>Cifrado Vigenère</h3>
+            <p><b>Tipo:</b> simétrico clásico, de sustitución polialfabética.</p>
+            <p><b>Características:</b> la clave es una palabra y cada una de sus letras mueve una letra distinta del mensaje. Es más difícil de romper que el César, pero si la clave es corta se puede atacar con análisis de frecuencias.</p>
+            <p><b>Aplicaciones:</b> protegió mensajes durante siglos. Hoy se estudia para entender cómo evolucionó la criptografía.</p>
+        </div>
+    </div>
+</section>
+        
         <!-- Requerimiento 4 y 6: Módulo de Cifrado y Generación de Claves -->
         <section class="concepts-section">
             <h2>Módulo de Cifrado</h2>
